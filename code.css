@@ -16,6 +16,9 @@ body{
     background-color: rgba(67, 235, 118, 0.515);
     
 }
+#web_button{
+    margin-left: 8vw;
+}
 #Entry_box{
     border-bottom: 1px solid black;
 }
