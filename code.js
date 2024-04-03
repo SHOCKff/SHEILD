@@ -2,6 +2,7 @@ let textbox1=document.getElementById("textbox1");
 let textbox2=document.getElementById("textbox2");
 let paste_but=document.getElementById("paste_button");
 let copy_but=document.getElementById("copy_button");
+let web_but=document.getElementById("web_button");
 let key=document.getElementById("myrange");
 paste_but.onclick=()=>{ //paste button
     paste_clip( );
@@ -30,14 +31,14 @@ let generate_but=document.getElementById("generate_button");
 generate_but.onclick=()=>{ // Generate function
     //checking the msg enscripted or descripted
     if(key.value!=0){
-        alert("Select the correct key from bottom of page");
-        location.reload();
-                   };
+        alert("Select the correct key from bottom of page")}
+    else{               
     if(textbox1.value[textbox1.value.length-1]=="*")
     {De_scription();}  //code msg
     else
     {Enscription();}; //Normal msg
-                         }
+                         }};
+                        
 Enscription=()=>{ 
     str=textbox1.value;
     str1="";
@@ -72,7 +73,8 @@ De_scription=()=>{
     console.log(De_scripted);
     // sending encoded msg to output box
     textbox2.value=De_scripted;
-
-
-
+}
+//web link
+web_but.onclick=()=>{
+    location.href =textbox2.value;
 }
